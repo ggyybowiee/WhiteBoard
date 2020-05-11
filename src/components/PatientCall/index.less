@@ -1,0 +1,42 @@
+.patientCallAnimate {
+  width: 16rem;
+  height: 16rem;
+  max-width: 280px;
+  max-height: 280px;
+  /* 加载图像 */
+  background-image: url('./images/patient_call.png');
+  /* 让它在 y 轴重复，这样可以实现连续的帧动画 */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* 设置初始位置 */
+  background-position: 0 0;
+  position: absolute;
+  top: -8rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 16rem;
+}
+
+.callingPatInfo {
+  font-size: 3.75rem;
+  color: @header-font-color;
+  text-align: center;
+  margin-top: 8rem;
+  margin-bottom: 4.75rem;
+
+  span {
+    display: inline-block;
+  }
+
+  span:last-child {
+    margin-left: 2rem;
+  }
+}
+
+.callingSpan {
+  display: inline-block;
+  font-size: 3.75rem;
+  color: @total-num-color;
+}

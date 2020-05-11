@@ -1,0 +1,234 @@
+.earlySenseWrap {
+  width: 100%;
+  height: 100%;
+
+  :global {
+    .ant-carousel .slick-dots {
+      bottom: 0;
+    }
+    .ant-carousel .slick-dots li button {
+      background-color: @column-font-color !important;
+    }
+    .ant-carousel .slick-dots li.slick-active button {
+      background-color: @column-font-color !important;
+    }
+    .ant-carousel {
+      height: 100%;
+      .slick-slider {
+        height: 100%;
+        .slick-track{
+          height: 100%;
+        }
+      }
+      .slick-slider div{
+        height: 100%;
+      }
+    }
+
+    .ant-spin-spinning {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(~"50% - 29px");
+    }
+  
+    .ant-spin {
+      color: @whiteboard-primary-bgcolor;
+    }
+  
+    .ant-spin-dot i {
+      background-color:  @whiteboard-primary-bgcolor;
+    }
+  }
+
+  .loadingStyle {
+    object-fit: contain;
+    position: fixed !important;
+    top: 3.15rem !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    box-sizing: border-box !important;
+    min-width: 0px !important;
+    max-width: none !important;
+    min-height: 0px !important;
+    max-height: none !important;
+    width: 100% !important;
+    height: calc(~"100% - 3.15rem - 6.75rem") !important;
+    transform: none !important;
+    margin: 0px !important;
+    z-index: 999;
+    background: @wrap-bgcolor;
+  }
+
+  .cardItemFlex {
+    display: flex !important;
+    flex-wrap: wrap;
+    height: calc(~"100% / 3 - 0.2rem") !important;
+  }
+
+  .cardWrapPaddingAndFlex {
+    padding: 1rem 2rem 1rem 2rem;
+    flex: calc(~"100% / 4");
+    flex-grow: inherit;
+  }
+
+  .cardWrap {
+    width: 100%;
+    height: 100% !important;
+    background: @bed-card-bgcolor;
+    box-shadow: 0px 0px 0.375rem 0px rgba(64, 64, 64, 0.16);
+    border-radius: 0.5rem;
+    display: inline-block;
+    position: relative;
+    padding: 1rem;
+  }
+
+  .cardWrap div {
+    height: min-content !important;
+  }
+
+  .alertCardWrap {
+    border: solid 1px @earlysense-card-border-color;
+    box-shadow: 0px 2px 0.5rem 0px rgba(117, 117, 117, 0.1);
+  }
+
+  .topRightColorBlock {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border: 1.4rem solid;
+    border-top: 1.4rem solid transparent;
+    border-left: 1.4rem solid transparent;
+    border-bottom-right-radius: 0.5rem;
+    transform: rotate(-90deg);
+  }
+
+  .bedNumBox {
+    overflow:hidden;
+    clear: both;
+    border-bottom: 1px solid @earlysense-card-border-bottom-color;
+    padding: 0rem 0rem 0.5rem 0rem;
+    font-size: 1.6rem;
+    line-height: 4.3rem;
+    color: @header-font-color;
+  }
+
+  .bedNum {
+    float: left;
+  }
+
+  .nurseLevel {
+    float: right;
+  }
+
+  .hrValue {
+    color:@header-font-color;
+    font-size: 4.3rem;
+    font-weight: 700;
+    background: url('./icon_xinlv.svg') no-repeat left center;
+    background-size: 28%;
+    padding-left: 4rem;
+    display: inline-block;
+    width: 11rem;
+  }
+
+  .commonValue { 
+    display: inline-block;
+    width: 11rem;
+  }
+
+  .hrValueExp {
+    color: @earlysense-alarm-color;
+    font-size: 4.3rem;
+    font-weight: 700;
+    background: url('./icon_xinlv_exp.svg') no-repeat left center;
+    background-size: 30%;
+    padding-left: 4rem;
+  }
+
+  .rrValue {
+    color:@header-font-color;
+    font-size: 4.3rem;
+    font-weight: 700;
+    background: url('./icon_huxi.svg') no-repeat left center;
+    background-size: 30%;
+    padding-left: 4rem;
+  }
+
+  .rrValueExp {
+    color:@earlysense-alarm-color;
+    font-size: 4.3rem;
+    font-weight: 700;
+    background: url('./icon_huxi_exp.svg') no-repeat left center;
+    background-size: 30%;
+    padding-left: 4rem;
+  }
+
+  .bottomContent {
+    height: 3.6rem;
+    line-height: 3.6rem;
+    padding: 0 1rem;
+    background: @bed-card-bottom-bgcolor;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    overflow: hidden;
+    position: absolute;
+    font-size: 1.6rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    .moveValue {
+      color: @header-font-color;
+      padding-left: 1rem;
+      font-weight: 600;
+    }
+
+    .moveValueExp {
+      color:@earlysense-alarm-color;
+      padding-left: 1rem;
+    }
+
+    .turnValue {
+      color: @header-font-color;
+      padding-left: 1rem;
+      font-weight: 600;
+    }
+
+    .turnValueExp {
+      color: @earlysense-alarm-color;
+    }
+  }
+
+  .centerContent {
+    height: calc(~"100% - 4.8rem - 6.9rem") !important;
+
+    .marginTop {
+      margin-top: calc(~"50% - 4.8rem - 3.6rem - 3.4rem") !important;
+    }
+  }
+
+  .notInBedCode {
+    color: @earlysense-not-in-bed-color;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 4.8rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .notInBedTime {
+    color: @earlysense-not-in-bed-color;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: -1rem;
+  }
+}

@@ -1,0 +1,39 @@
+// @import '../../variables.less';
+
+.info {
+  padding: 10px 0;
+  height: 44px;
+
+  & > span {
+    position: relative;
+    margin-right: 14px;
+    display: inline-block;
+    padding-right: 13px;
+    font-size: 16px;
+    // color: #333333;
+    color: #2c2c2c;
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      display: block;
+      height: 70%;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #cfd2d5;
+      width: 1px;
+    }
+  }
+}
+
+.noPatient {
+  color: #d9d9d9;
+  height: 44px;
+}

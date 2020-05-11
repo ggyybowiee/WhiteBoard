@@ -1,0 +1,62 @@
+.warningWristbandAnimate {
+  width: 16rem;
+  height: 16rem;
+  max-width: 280px;
+  max-height: 280px;
+  /* 加载图像 */
+  background-image: url('./images/leave_ward.png');
+  /* 让它在 y 轴重复，这样可以实现连续的帧动画 */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* 设置初始位置 */
+  background-position: 0 0;
+  position: absolute;
+  top: -8rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 16rem;
+}
+
+.leavingPatInfo {
+  font-size: 3.75rem;
+  color: @header-font-color;
+  text-align: center;
+  margin-top: 5rem;
+
+  span {
+    display: inline-block;
+  }
+
+  span:last-child {
+    margin-left: 2rem;
+  }
+}
+
+.leaveAction {
+  font-size: 3.75rem;
+  color: @early-warning-color;
+  text-align: center;
+}
+
+.receiveButton {
+  display: inline-block;
+  font-size: 2.25rem;
+  color: #fff;
+  background: linear-gradient(270deg, 
+		#f64e4f 0%, 
+		#fe808a 100%);
+  border-radius: 2.5rem;
+  width: 24.5rem;
+  height: 5rem;
+  line-height: 5rem;
+}
+
+.receiveButton:focus {
+  border: 1px solid @whiteboard-primary-bgcolor;
+}
+
+.receiveButton:hover {
+  color: #fff;
+}

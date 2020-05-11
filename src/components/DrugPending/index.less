@@ -1,0 +1,100 @@
+// @import '../../variables.less';
+
+.wrap {
+  position: relative;
+}
+
+.left {
+  position: absolute;
+  bottom: 15px;
+  left: 0px;
+  top: 72px;
+  width: 335px;
+  background-color: #fff;
+  padding-top: 28px;
+  padding-left: 24px;
+  padding-right: 20px;
+  transition: all .2s ease;
+
+  .hide & {
+    left: -335px;
+    display: none;
+  }
+}
+
+.right {
+  margin-left: 335px;
+  padding: 15px 25px;
+  transition: all .2s ease;
+
+  .hide & {
+    margin-left: 0;
+  }
+}
+
+// .hide {
+
+// }
+
+.timeSpan {
+  height: 48px;
+  line-height: 48px;
+  .hide & {
+    display: none;
+  }
+
+  :global {
+    .ant-select-selection {
+      // color: @primary;
+      border: 0;
+      height: 48px;
+      font-size: 16px;
+    }
+
+    .ant-select-selection__rendered {
+      margin-left: 20px;
+      margin-right: 20px;
+      line-height: 48px;
+    }
+
+    .ant-select-arrow {
+      // color: @primary;
+      font-size: 20px;
+      right: 18px;
+    }
+  }
+}
+
+.downMenu {
+  border-radius: 4px;
+
+  :global {
+    .ant-select-dropdown-menu-item {
+      color: #666;
+      line-height: 36px;
+      font-size: 16px;
+      border-bottom: 1px #DFE3E6 solid;
+    }
+    .ant-select-dropdown-menu-item-selected {
+      // background-color: @primary;
+      color: #fff;
+    }
+    .ant-select-dropdown-menu-item-active:hover {
+      color: #fff;
+      // background-color: @primary;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .hide & {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+}
+

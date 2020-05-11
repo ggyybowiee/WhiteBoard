@@ -1,0 +1,31 @@
+{
+  "name": "whiteboard",
+  "version": "1.1.0",
+  "description": "护理小白板",
+  "private": true,
+  "scripts": {
+    "serve": "node node_modules/platform/scripts/serveModule.js",
+    "build": "node node_modules/platform/scripts/buildModule.js",
+    "scaffoldServer": "set PLATFORM_RUNNING_PATH=%cd%& cd .\\node_modules\\platform & npm run scaffoldServer"
+  },
+  "dependencies": {
+    "platform": "^1.1.0"
+  },
+  "devDependencies": {},
+  "lint-staged": {
+    "**/*.{js,jsx,less}": [
+      "prettier --wirter",
+      "git add"
+    ],
+    "**/*.{js,jsx}": "lint-staged:js",
+    "**/*.less": "stylelint --syntax less"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}

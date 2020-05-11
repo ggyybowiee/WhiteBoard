@@ -1,0 +1,154 @@
+.wrap {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: @wrap-bgcolor;
+  color: #000;
+}
+
+.layoutHeader {
+  display: flex;
+  box-shadow: 0px 2px 27px 0px 
+    rgba(71, 71, 71, 0.16);
+  margin-bottom: 0.625rem;
+}
+
+.header {
+  overflow: hidden;
+  clear: both;
+  font-size: 1.375rem;
+  height: 3.75rem;
+  line-height: 3.75rem;
+  background-color: @header-bgcolor;
+  padding: 0 1.25rem;
+  color: @header-font-color;
+
+  .headerLeft {
+    text-align: left;
+    flex: 1;
+    img {
+      width: 2.5rem;
+    }
+    span {
+      display: inline-block;
+      margin-left: 0.625rem;
+    }
+    span:last-child {
+      margin-left: 1.25rem;
+    }
+  }
+
+  .headerCenter {
+    flex: 1;
+    text-align: center;
+    span {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+
+  .headerRight {
+    flex: 1;
+    text-align: right;
+
+    span {
+      display: inline-block;
+    }
+    
+    .line {
+      color: @line-color;
+      padding: 0 1rem;
+    }
+
+    .logo {
+      width: 12.5rem;
+      height: 3.75rem;
+      line-height: 3.75rem;
+      text-align: center;
+      background: url(./LOGO.svg) no-repeat left 52%;
+      background-size: 100%;
+      vertical-align: middle;
+    }
+  }
+}
+
+.content {
+  height: calc(~"100% - 4.375rem - 6.75rem - 1rem");
+  margin: 0px 1.25rem 1rem 1.25rem;
+}
+
+.isFullScreen {
+  height: calc(~"100% - 4.375rem - 1rem");
+}
+
+.footer {
+  display: flex;
+  background-color: @footer-bgcolor;
+  height: 6.75rem;
+  position: relative;
+  color: @footer-font-color;
+  padding: 0;
+}
+
+.nav {
+  flex-grow: 1;
+  display: flex;
+
+  a:hover {
+    color: @footer-font-color;
+  }
+}
+
+.navItem {
+  color: @footer-font-color;
+  font-size: 1.5rem;
+  text-decoration: none;
+  flex: 1;
+  padding: 0rem 1.2rem;
+  text-align: center;
+
+  .navItemBlock {
+    display: inline-block;
+    height: 4.625rem;
+    line-height: 4.625rem;
+    margin-top: 1.0625rem;
+    border-radius: 1rem;
+    padding: 0 1.25rem;
+
+    span {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+
+  }
+  
+  &:hover {
+    .navItemBlock {
+      pointer-events: none;
+      display: inline-block;
+      height: 4.625rem;
+      line-height: 4.625rem;
+      margin-top: 1.0625rem;
+      border-radius: 1rem;
+      padding: 0 1.25rem;
+      text-decoration: none;
+
+      span {
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+.navItem:focus {
+  .navItemBlock {
+    border: 1px solid @whiteboard-primary-bgcolor;
+  }
+}
+
+.active {
+  background-color: @whiteboard-primary-bgcolor;
+  text-decoration: none;
+  color: @footer-font-color;
+}

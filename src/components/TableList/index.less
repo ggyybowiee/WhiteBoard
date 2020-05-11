@@ -1,0 +1,134 @@
+// @import '../../variables.less';
+// @import "~antd/lib/style/themes/default.less";
+
+@dark-row-color: #4c515a;
+@light-row-color: #eff2f4;
+
+.wrap {
+  height: 100%;
+
+  :global {
+    .ant-spin-container {
+      height: 100%;
+    }
+  }
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.subTitle {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  color: #969faf;
+  margin-bottom: 10px;
+  padding: 0 20px;
+
+  & > div {
+    flex-grow: 1;
+  }
+}
+
+.list {
+  overflow: auto;
+}
+
+.item {
+  color: #fff;
+  display: flex;
+  transition: all .1s ease;
+  justify-content: space-between;
+  background-color: @dark-row-color;
+  border:  @dark-row-color 1px solid;
+  border-radius: 3px;
+  height: 48px;
+  line-height: 48px;
+  margin-bottom: 8px;
+  padding: 0 20px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.active {
+    background-color: #666;
+    border: #666 solid 1px;
+    box-shadow: 0 3px 7px#313742;
+    color: #fff;
+
+    .light & {
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  .table & {
+    transition: none;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-radius: 0;
+    border: 0;
+    border-bottom: #dfe2e6 1px solid;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &.active {
+      border-radius: 3px;
+      // background-color: @primary-color;
+    }
+  }
+}
+
+.light > * {
+  background-color: @light-row-color;
+  border-color: @light-row-color;
+  color: #333;
+}
+
+.cross > * {
+  &:nth-child(2n) {
+    background-color: #d8dce1;
+  }
+
+  &.active:nth-child(2n) {
+    // background-color: @primary-color;
+  }
+}
+
+.cross_1 > * {
+  &:nth-child(2n+1) {
+    background-color: #d8dce1;
+  }
+
+  &.active:nth-child(2n+1) {
+    // background-color: @primary-color;
+  }
+}
+
+.columnItem {
+  flex-grow: 1;
+
+  & > div {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.none {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  color: #969faf;
+}
+
+.value {
+
+}

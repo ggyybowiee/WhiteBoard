@@ -1,0 +1,203 @@
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: rgba(191, 191, 191, 0.24);
+}
+
+.mewsAlertAnimate {
+  width: 16rem;
+  height: 16rem;
+  max-width: 280px;
+  max-height: 280px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  position: absolute;
+  top: -8rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 16rem;
+}
+
+.lowDangerAnimate {
+  background-image: url('./images/mews_alert_1.png');
+}
+
+.mediumDangerAnimate {
+  background-image: url('./images/mews_alert_2.png');
+}
+
+.highDangerAnimate {
+  background-image: url('./images/mews_alert_3.png');
+}
+
+.mewsAlertText {
+  display: inline-block;
+  width: 9.625rem;
+  height: 9.625rem;
+  line-height: 8.625rem;
+  color: #fff;
+  position: absolute;
+  top: calc(~"50% - 4.8125rem");
+  left: calc(~"50% - 4.8125rem");
+
+  label {
+    font-size: 3.75rem;
+  }
+
+  span {
+    font-size: 1.6rem;
+  }
+}
+
+.mewsContent {
+  display: flex;
+  margin-bottom: 2rem;
+
+  .mewsInfo {
+    flex: 1;
+
+    .mewsAlertHeader {
+      span:first-child {
+        font-size: 3.75rem;
+        color: @header-font-color;
+      }
+
+      span:last-child {
+        font-size: 2.375rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .patientInfo {
+    flex: 1;
+
+    .mewsAlertHeader {
+      font-size: 3.75rem;
+      color: @header-font-color;
+      text-align: right;
+
+      span:last-child {
+        margin-left: 2rem;
+      }
+    }
+
+    .mewsHeaderPatPanel {
+      text-align: right;
+      font-size: 1.575rem;
+      color: @header-font-color;
+      margin-bottom: 2.3rem;
+
+      span {
+        display: inline-block;
+        max-width: 7.2rem;
+        overflow: hidden;
+        word-break: keep-all;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        vertical-align: top;
+      }
+    }
+
+    .mewsAlertProcessPanel {
+      height: 14.375rem;
+      padding: 1.2rem 0rem;
+      overflow: auto;
+
+      >span {
+        color: @header-font-color;
+        font-weight: bold;
+      }
+      >ul {
+        list-style: none;
+        margin: 0;
+        text-align: left;
+        >li {
+          color: @header-font-color;
+          font-size: 1.875rem;
+          line-height: 2.9rem;
+          >span {
+            color: @early-warning-mews-alert-time-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mewsAlertTime {
+  color: @early-warning-mews-alert-time-color;
+  font-size: 1.875rem;
+}
+
+.mewsAlertVital {
+  width: 100%;
+  height: 14.375rem;
+  background: @early-warning-mews-score-bgcolor;
+  padding: 1.5rem;
+}
+
+.mewsAlertVitalDetailPanel {
+  display: flex;
+  width: 100%;
+  color: @early-warning-mews-score-color;
+  line-height: 2.5rem;
+  font-size: 1.25rem;
+
+  .mewsAlertVitalDetailLine {
+    flex-grow: 1;
+    border: 1px dashed @early-warning-mews-score-color;
+    height: 2px;
+    margin: auto 5px;
+  }
+
+  .mewsAlertVitalDetailScore {
+    width: 0.625rem;
+  }
+}
+
+.handleAlertLaterButton {
+  display: inline-block;
+  font-size: 2.25rem;
+  color: @total-num-color;
+  height: 5rem;
+  line-height: 5rem;
+  width: 16rem;
+}
+
+.handleAlertLaterButton:focus {
+  color: @total-num-color;
+  border: 1px solid @whiteboard-primary-bgcolor;
+}
+
+.handleAlertLaterButton:hover {
+  color: @total-num-color;
+}
+
+.handleAlertButton {
+  display: inline-block;
+  font-size: 2.25rem;
+  color: #fff;
+  background: linear-gradient(-90deg, 
+		#3674e0 0%, 
+		#3c9bf4 100%);
+  border-radius: 2.5rem;
+  width: 23.5rem;
+  height: 5rem;
+  line-height: 5rem;
+}
+
+.handleAlertButton:focus {
+  border: 1px solid @whiteboard-primary-bgcolor;
+}
+
+.handleAlertButton:hover {
+  color: #fff;
+}

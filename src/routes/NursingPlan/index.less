@@ -1,0 +1,577 @@
+:global {
+  .ant-select-dropdown-menu-item:hover {
+    background-color: #fafafa;
+    color: @total-num-color;
+  }
+
+  .ant-select-dropdown-menu-item-selected, .ant-select-dropdown-menu-item-selected:hover {
+    color: @total-num-color;
+    background-color: #fafafa;
+  }
+}
+
+.nursingPlanWrap {
+  height: 100%;
+  display: flex;
+
+  :global {
+    .ant-carousel .slick-dots {
+      bottom: -0.5rem;
+    }
+    .ant-carousel .slick-dots li button {
+      background-color: @column-font-color !important;
+    }
+    .ant-carousel .slick-dots li.slick-active button {
+      background-color: @column-font-color !important;
+    }
+    .ant-carousel {
+      height: 100%;
+      .slick-slider {
+        height: 100%;
+        .slick-track{
+          height: 100%;
+        }
+      }
+      .slick-slider div{
+        height: 100%;
+      }
+    }
+
+    .ant-spin-spinning {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(~"50% - 29px");
+    }
+
+    .ant-spin {
+      color: @whiteboard-primary-bgcolor;
+    }
+
+    .ant-spin-dot i {
+      background-color:  @whiteboard-primary-bgcolor;
+    }
+
+  }
+
+  .loadingStyle {
+    object-fit: contain;
+    position: fixed !important;
+    top: 3.15rem !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    box-sizing: border-box !important;
+    min-width: 0px !important;
+    max-width: none !important;
+    min-height: 0px !important;
+    max-height: none !important;
+    width: 100% !important;
+    height: calc(~"100% - 3.15rem - 6.75rem") !important;
+    transform: none !important;
+    margin: 0px !important;
+    z-index: 999;
+    background: @wrap-bgcolor;
+  }
+
+  .subHeader { 
+    height: 3.75rem;
+    line-height: 3.75rem;
+    overflow: hidden;
+    font-size: 1.5rem;
+    background: @content-bgcolor;
+    position: relative;
+
+    :global {
+      .ant-radio-group {
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+      .ant-radio-button-wrapper {
+        height: 3.75rem;
+        line-height: 3.75rem;
+        text-align: center;
+        font-size: 1.375rem;
+        color: @header-font-color;
+        background: @content-bgcolor;
+        border: none;
+        flex: 1;
+        border-bottom: 1px solid @nursing-plan-border-bottom-color;
+        border-radius: 0px;
+      }
+      .ant-radio-button-wrapper:hover {
+        box-shadow: none;
+        color: @whiteboard-primary-bgcolor;
+        background: @content-bgcolor;
+        border-color: transparent;
+        border-bottom: 1px solid @nursing-plan-border-bottom-color;
+      }
+      .ant-radio-button-wrapper-checked {
+        box-shadow: none;
+        color: @whiteboard-primary-bgcolor;
+        background: @content-bgcolor;
+        border-color: transparent;
+        border-bottom: 1px solid @nursing-plan-border-bottom-color;
+
+        span:last-child {
+          position: relative;
+          height: 100%;
+          width: 100%;
+        }
+
+        span:last-child:after {
+          content: '';
+          position: absolute;
+          height: 0.1rem;
+          width: 100%;
+          background: @whiteboard-primary-bgcolor;
+          bottom: calc(~"-1rem - 1px");
+          left: 0;
+        }
+      }
+
+      .ant-radio-button-wrapper:not(:first-child)::before {
+        width: 0;
+      }
+      .ant-radio-button-wrapper:not(:first-child):before {
+        width: 0;
+      }
+    }
+    .line {
+      display: inline-block;
+      width: 1px;
+      height: 2.75rem;
+      margin-top: 0.5rem;
+      background-color: @nursing-plan-border-bottom-color;
+    }
+  }
+
+  .leftContent {
+    width: 27.44vw;
+    margin-right: 0.875rem;
+    height: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 1rem 0px rgba(64, 64, 64, 0.22);
+
+    .header {
+      height: 3.75rem;
+      line-height: 3.75rem;
+      overflow: hidden;
+      font-size: 1.5rem;
+      background: @title-primary-bgcolor;
+      padding: 0 2rem;
+      clear: both;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+
+      .leftText {
+        float: left;
+        background: url('./icons/vital-sign.svg') no-repeat left center;
+        background-size: 2.4rem 2.4rem;
+        padding: 0rem 0rem 0rem 2.8rem;
+      }
+
+      .rightText {
+        float: right;
+        font-size: 1.25rem;
+        height: 3.75rem;
+
+        :global {
+          .ant-select-selection {
+            border: none;
+            background: transparent;
+            box-shadow: none;
+            color: @total-num-color;
+            font-size: 1.625rem;
+          }
+          .ant-select-arrow {
+            margin-top: -2px;
+            color: @total-num-color;
+            font-weight: bold;
+            font-size: 1rem;
+          }
+
+          .ant-select-open .ant-select-selection {
+            border-color: transparent;
+
+            .ant-select-arrow {
+              margin-top: -8px;
+            }
+          }
+        }
+      }
+    }
+
+    .content {
+      height: calc(~"100% - 3.75rem - 3.75rem");
+      padding: 0.25rem 2rem 1.25rem 2rem;
+      margin: 0;
+      position: relative;
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      background-color: @content-bgcolor;
+    }
+  }
+  .centerContent {
+    width: 27.44vw;
+    height: 100%;
+    margin-right: 0.875rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 1rem 0px rgba(64, 64, 64, 0.22);
+
+    .header {
+      height: 3.75rem;
+      line-height: 3.75rem;
+      overflow: hidden;
+      font-size: 1.5rem;
+      clear: both;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      background:  @title-primary-bgcolor url('./icons/evaluate-risk.svg') no-repeat 2rem center;
+      background-size: 2.4rem 2.4rem;
+      padding: 0rem 0rem 0rem 4.8rem;
+    }
+
+    .content {
+      height: calc(~"100% - 3.75rem - 3.75rem");
+      padding: 0.25rem 2rem 1.25rem 2rem;
+      margin: 0;
+      position: relative;
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      background-color: @content-bgcolor;
+    }
+  }
+  .rightContent {
+    width: 41.97vw;
+    height: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 1rem 0px rgba(64, 64, 64, 0.22);
+
+    .header {
+      height: 3.75rem;
+      line-height: 3.75rem;
+      overflow: hidden;
+      font-size: 1.5rem;
+      clear: both;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      background: @title-primary-bgcolor url('./icons/execute-order.svg') no-repeat 2rem center;
+      background-size: 2.4rem 2.4rem;
+      padding: 0rem 0rem 0rem 4.8rem;
+    }
+
+    .content {
+      height: calc(~"100% - 3.75rem - 3.75rem");
+      padding: 0.25rem 2rem 1.25rem 2rem;
+      margin: 0;
+      position: relative;
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      background-color: @content-bgcolor;
+    }
+  }
+
+  .vitalSignByTypeWrap {
+    height: 100%;
+    .contentWrap {
+      width: 100%;
+      height: 100%;
+      display: flex !important;
+      padding-right: 2rem;
+    }
+
+    .leftLabel {
+      width: 5.5rem;
+      height: 2.8125rem;
+      background: @left-label-bgcolor;
+      margin-top: 1rem;
+      border-radius: 4px;
+      border: solid 1px @sub-title-border-color;
+      box-sizing: content-box;
+      span {
+        display: inline-block;
+        color: @header-font-color;
+        font-size: 1.375rem;
+        height: calc(~'2.8125rem - 2px');
+        line-height: calc(~'2.8125rem - 2px');
+        padding: 0 0.75rem;
+        text-align: center;
+      }
+      span:first-child {
+        width: 5.5rem;
+        letter-spacing: 0px;
+      }
+    }
+
+    .rightLabel {
+      width: calc(~"100% - 5.5rem - 0.5rem");
+      margin-left: 0.5rem;
+      span {
+        display: inline-block;
+        width: 3.75rem;
+        height: 2.8125rem;
+        line-height: 2.8125rem;
+        margin-left: 0.5rem;
+        font-size: 1.75rem;
+        color: @footer-font-color;
+        text-align: center;
+        margin-top: 1rem;
+        border-radius: 1.4375rem;
+      }
+    }
+  }
+
+  .vitalSignByPatientWrap {
+    height: 100%;
+    .contentWrap {
+      width: 100%;
+      height: 100%;
+      display: flex !important;
+      padding-right: 2rem;
+    }
+
+    .leftLabel {
+      width: 3.75rem;
+      height: 2.8125rem;
+      margin-top: 1rem;
+      span {
+        display: inline-block;
+        color: @footer-font-color;
+        font-size: 1.75rem;
+        height: 2.8125rem;
+        line-height: 2.8125rem;
+        text-align: center;
+        border-radius: 1.4375rem;
+      }
+      span:first-child {
+        width: 3.75rem;
+        letter-spacing: 0px;
+      }
+    }
+
+    .rightLabel {
+      width: calc(~"100% - 3.75rem - 0.5rem");
+      margin-left: 0.5rem;
+      span {
+        display: inline-block;
+        background: @left-label-bgcolor;
+        border: solid 1px @sub-title-border-color;
+        width: 5.5rem;
+        height: calc(~'2.8125rem - 2px');
+        line-height: calc(~'2.8125rem - 2px');
+        box-sizing: content-box;
+        margin-left: 0.5rem;
+        font-size: 1.375rem;
+        color: @header-font-color;
+        text-align: center;
+        margin-top: 1rem;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .evalByTypeWrap {
+    height: 100%;
+    .contentWrap {
+      width: 100%;
+      height: 100%;
+      display: flex !important;
+      padding-right: 2rem;
+    }
+
+    .leftLabel {
+      width: 5.5rem;
+      height: 2.8125rem;
+      background: @left-label-bgcolor;
+      margin-top: 1rem;
+      border-radius: 4px;
+      border: solid 1px @sub-title-border-color;
+      box-sizing: content-box;
+      span {
+        display: inline-block;
+        color: @header-font-color;
+        font-size: 1.375rem;
+        height: calc(~'2.8125rem - 2px');
+        line-height: calc(~'2.8125rem - 2px');
+        padding: 0 0.75rem;
+        text-align: center;
+      }
+      span:first-child {
+        width: 5.5rem;
+        letter-spacing: 0px;
+      }
+    }
+
+    .rightLabel {
+      width: calc(~"100% - 5.5rem - 0.5rem");
+      margin-left: 0.5rem;
+      span {
+        display: inline-block;
+        width: 3.75rem;
+        height: 2.8125rem;
+        line-height: 2.8125rem;
+        margin-left: 0.5rem;
+        font-size: 1.75rem;
+        color: @footer-font-color;
+        text-align: center;
+        margin-top: 1rem;
+        border-radius: 1.4375rem;
+      }
+    }
+  }
+
+  .evalByPatientWrap {
+    height: 100%;
+    .contentWrap {
+      width: 100%;
+      height: 100%;
+      display: flex !important;
+      padding-right: 2rem;
+    }
+
+    .leftLabel {
+      width: 3.75rem;
+      height: 2.8125rem;
+      margin-top: 1rem;
+      span {
+        display: inline-block;
+        color: @footer-font-color;
+        font-size: 1.75rem;
+        height: 2.8125rem;
+        line-height: 2.8125rem;
+        text-align: center;
+        border-radius: 1.4375rem;
+      }
+      span:first-child {
+        width: 3.75rem;
+        letter-spacing: 0px;
+      }
+    }
+
+    .rightLabel {
+      width: calc(~"100% - 3.75rem - 0.5rem");
+      margin-left: 0.5rem;
+      span {
+        display: inline-block;
+        background: @left-label-bgcolor;
+        border: solid 1px @sub-title-border-color;
+        width: 5.5rem;
+        height: calc(~'2.8125rem - 2px');
+        line-height: calc(~'2.8125rem - 2px');
+        box-sizing: content-box;
+        margin-left: 0.5rem;
+        font-size: 1.375rem;
+        color: @header-font-color;
+        text-align: center;
+        margin-top: 1rem;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .orderByTypeWrap {
+    height: 100%;
+    .contentWrap {
+      width: 100%;
+      height: 100%;
+      display: flex !important;
+      padding-right: 2rem;
+    }
+
+    .leftLabel {
+      width: 7.5rem;
+      height: 2.8125rem;
+      background: @left-label-bgcolor;
+      margin-top: 1rem;
+      border-radius: 4px;
+      border: solid 1px @sub-title-border-color;
+      box-sizing: content-box;
+      span {
+        display: inline-block;
+        color: @header-font-color;
+        font-size: 1.375rem;
+        height: calc(~'2.8125rem - 2px');
+        line-height: calc(~'2.8125rem - 2px');
+        padding: 0 0.75rem;
+        text-align: center;
+      }
+      span:first-child {
+        width: 7.5rem;
+        letter-spacing: 0px;
+      }
+    }
+
+    .rightLabel {
+      width: calc(~"100% - 7.5rem - 0.5rem");
+      margin-left: 0.5rem;
+      span {
+        display: inline-block;
+        width: 3.75rem;
+        height: 2.8125rem;
+        line-height: 2.8125rem;
+        margin-left: 0.5rem;
+        font-size: 1.75rem;
+        color: @footer-font-color;
+        text-align: center;
+        margin-top: 1rem;
+        border-radius: 1.4375rem;
+      }
+    }
+  }
+
+  .orderByPatientWrap {
+    height: 100%;
+    .contentWrap {
+      width: 100%;
+      height: 100%;
+      display: flex !important;
+      padding-right: 2rem;
+    }
+
+    .leftLabel {
+      width: 3.75rem;
+      height: 2.8125rem;
+      margin-top: 1rem;
+      span {
+        display: inline-block;
+        color: @footer-font-color;
+        font-size: 1.75rem;
+        height: 2.8125rem;
+        line-height: 2.8125rem;
+        text-align: center;
+        border-radius: 1.4375rem;
+      }
+      span:first-child {
+        width: 3.75rem;
+        letter-spacing: 0px;
+      }
+    }
+
+    .rightLabel {
+      width: calc(~"100% - 3.75rem - 0.5rem");
+      margin-left: 0.5rem;
+      span {
+        display: inline-block;
+        background: @left-label-bgcolor;
+        border: solid 1px @sub-title-border-color;
+        width: 7.5rem;
+        height: calc(~'2.8125rem - 2px');
+        line-height: calc(~'2.8125rem - 2px');
+        box-sizing: content-box;
+        margin-left: 0.5rem;
+        font-size: 1.375rem;
+        color: @header-font-color;
+        text-align: center;
+        margin-top: 1rem;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .commonHeightDiv div {
+    width: 100%;
+    height: min-content !important;
+  }
+}

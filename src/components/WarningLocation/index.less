@@ -1,0 +1,156 @@
+@keyframes pointScale {
+  0% {
+    transform: scale(1);
+    opacity: .6;
+  }
+
+  50% {
+    transform: scale(8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.warningLocationWrap {
+  :global {
+    .ant-carousel .slick-prev, .ant-carousel .slick-next {
+      color: @primary-color;
+      height: 10rem;
+      width: 5rem;
+      font-size: 5rem;
+      z-index: 999;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .slick-disabled {
+      opacity: 0;
+    }
+
+    .slick-next {
+      right: 1rem;
+    }
+
+    .slick-prev {
+      left: 1rem;
+    }
+  }
+}
+
+.arrowColor {
+  color: @early-warning-color;
+}
+
+.spread {
+  display: block;
+  width: 1.8rem;
+  height: 1.8rem;
+  position: relative;
+  background: #f64f50;
+  border-radius: 50%;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.7);
+}
+
+.spreadItem {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: #f64f50;
+  border-radius: 50%;
+
+  animation-name: pointScale;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.headerPanel {
+  height: 6.5rem;
+  display: flex;
+}
+
+.leftPart {
+  flex-basis: 60%;
+  color: @early-warning-location-color;
+  font-size: 4.375rem;
+
+  span {
+    display: inline-block;
+  }
+
+  .requestSupport {
+    background: url('./icons/request_support.svg') no-repeat left center;
+    background-size: 28%;
+    padding-left: 7rem;
+  }
+
+  .callHelp {
+    background: url('./icons/call_help.svg') no-repeat left center;
+    background-size: 28%;
+    padding-left: 7rem;
+  }
+
+  span:last-child {
+    margin-left: 2rem;
+  }
+
+}
+
+.rightPart {
+  flex-basis: 40%;
+  color: @header-font-color;
+  font-size: 1.875rem;
+  text-align: right;
+  line-height: 3.2rem;
+
+  .lineStyle {
+    color: @total-num-color;
+    padding: 0 0.5rem;
+  }
+
+  .location {
+    color: @total-num-color;
+  }
+}
+
+.mapPanel {
+  position: relative;
+  height: calc(~"100vh - 4.8rem - 6.5rem - 5rem - 5rem");
+  margin: 2rem 0rem 3rem 0rem;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+  }
+}
+
+.cancelAlarm {
+  display: inline-block;
+  font-size: 2.25rem;
+  color: #fff;
+  background: linear-gradient(270deg, 
+		#f64e4f 0%, 
+		#fe808a 100%);
+  border-radius: 2.5rem;
+  width: 24.5rem;
+  height: 5rem;
+  line-height: 5rem;
+}
+
+.cancelAlarm:focus {
+  border: 1px solid @whiteboard-primary-bgcolor;
+}
+
+.cancelAlarm:hover {
+  color: #fff;
+}
+

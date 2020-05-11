@@ -1,0 +1,493 @@
+.infusionListWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  :global {
+    .ant-carousel .slick-dots {
+      bottom: 0;
+    }
+    .ant-carousel .slick-dots li button {
+      background-color: @column-font-color !important;
+    }
+    .ant-carousel .slick-dots li.slick-active button {
+      background-color: @column-font-color !important;
+    }
+    .ant-carousel {
+      height: 100%;
+      .slick-slider {
+        margin-left: 0.34rem;
+        height: 100%;
+        .slick-list {
+          height: 100%;
+        }
+        .slick-track {
+          height: 100%;
+        }
+      }
+      .slick-slide > div {
+        height: 100%;
+      }
+    }
+
+    .ant-spin-spinning {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(~'50% - 29px');
+    }
+
+    .ant-spin {
+      color: @whiteboard-primary-bgcolor;
+    }
+
+    .ant-spin-dot i {
+      background-color: @whiteboard-primary-bgcolor;
+    }
+  }
+
+  .loadingStyle {
+    object-fit: contain;
+    position: fixed !important;
+    top: 3.15rem !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    box-sizing: border-box !important;
+    min-width: 0px !important;
+    max-width: none !important;
+    min-height: 0px !important;
+    max-height: none !important;
+    width: 100% !important;
+    height: calc(~'100% - 3.15rem - 6.75rem') !important;
+    transform: none !important;
+    margin: 0px !important;
+    z-index: 999;
+    background: @wrap-bgcolor;
+  }
+
+  .left {
+    width: 10rem;
+    height: calc(~"100% - 0.8rem");
+
+    .ruleWrap {
+
+      background-color: #ffffff;
+      box-shadow: 0 0 0.4rem 0 rgba(64, 64, 64, 0.16);
+      border-radius: 0.533rem;
+      height: calc(~"80% - 1rem");
+      .ruleInnerWrap {
+        height: 100%;
+        background: url('./images/bg_scale.png') no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        overflow: hidden;
+
+        .innerItem {
+          position: absolute;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .tipsWrap {
+      background-color: #ffffff;
+      box-shadow: 0rem 0rem 0.4rem 0rem rgba(64, 64, 64, 0.16);
+      border-radius: 0.533rem;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      height: 20%;
+      .tipItem {
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0.5rem;
+        .tipText {
+          font-size: 1rem;
+        }
+        .dropErrorIcon {
+          flex: 1;
+          width: 100%;
+          background: url('./images/icons_speed.svg') center no-repeat;
+        }
+        .lowRestIcon {
+          flex: 1;
+          width: 100%;
+          background: url('./images/icons_liquid.svg') center no-repeat;
+        }
+        .timeIcon {
+          flex: 1;
+          width: 100%;
+          background: url('./images/icons_time.svg') center no-repeat;
+        }
+        .speedIcon {
+          flex: 1;
+          width: 100%;
+          background: url('./images/icons_drop.svg') center no-repeat;
+        }
+      }
+    }
+  }
+  .right {
+    width: calc(~'100% - 10rem');
+
+    .cardFlex {
+      display: flex !important;
+      flex-wrap: wrap;
+      height: 100%;
+      align-content: flex-start;
+    }
+
+    .cardWrapPaddingAndFlex {
+      padding: 0 0.334rem 0.334rem;
+      flex: calc(~'100% / 7');
+      flex-grow: inherit;
+      height: calc(~'100% / 5 - 0.15rem ') !important;
+
+      .cardWrap {
+        width: 100%;
+        height: 100%;
+        background: @bed-card-bgcolor;
+        box-shadow: 0 0.2rem 0.4rem 0px rgba(64, 64, 64, 0.16);
+        border-radius: 0.533rem;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+
+        .topRightWord {
+          font-size: 1.5rem;
+          position: absolute;
+          right: 0.5rem;
+          top: 0;
+        }
+
+        .topRightColorBlock {
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          width: 0;
+          height: 0;
+          border: 1.25rem solid;
+          border-top: 1.25rem solid transparent;
+          border-left: 1.25rem solid transparent;
+          border-bottom-right-radius: 0.5rem;
+          transform: rotate(-90deg);
+        }
+
+        .lowBatteryIcon {
+          position: absolute;
+          top: 0.375rem;
+          width: 100%;
+          display: block;
+          height: 2.2rem;
+          z-index: 44;
+          background: url('./images/icons_battery.svg') center no-repeat;
+        }
+
+        .cardLeft {
+          float: left;
+          width: 50%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 1.6rem;
+
+          .bedCodeWrap {
+            .bedCodeSubWrap {
+              display: flex;
+            }
+
+            .bedCode {
+              color: #333;
+            }
+          }
+          .patientInfo {
+            .patientName {
+              color: #333;
+              font-size: 1.6rem;
+            }
+          }
+        }
+
+        .cardRight {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+
+          .bottleCapacity {
+            font-size: 1.2rem;
+            color: #333;
+          }
+
+          .bottleOutlineWrap {
+            border-radius: 1.067rem;
+            border: solid 0.067rem #ccc;
+            padding: 0.4rem;
+
+            .bottleWrap {
+              height: 100%;
+              background-color: #f0f0f0;
+              border-radius: 0.667rem;
+              position: relative;
+              overflow: hidden;
+
+              .infusionStatusWrap {
+                z-index: 33;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 0;
+                &:after {
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  text-align: center;
+                }
+
+                &.search {
+                  background: url('./images/icons_search.svg') center no-repeat;
+                  background-size: 3.2rem 3.2rem;
+                  &::after {
+                    content: '匹配中';
+                  }
+                  background-color: inherit;
+                  & + .bottleRestVol {
+                    height: 0 !important;
+                  }
+                }
+
+                &.waiting {
+                  background: url('./images/icons_wait.svg') center no-repeat;
+                  background-size: 3.2rem 3.2rem;
+                  &::after {
+                    content: '等待开始';
+                  }
+                  background-color: inherit;
+                  & + .bottleRestVol {
+                    height: 0 !important;
+                  }
+                }
+
+                &.suspend {
+                  background: url('./images/icons_stop.svg') center no-repeat;
+                  background-size: 3.2rem 3.2rem;
+                  &::after {
+                    content: '输液暂停';
+                  }
+                  background-color: inherit;
+                  & + .bottleRestVol {
+                    height: 0 !important;
+                  }
+                }
+
+                 &.wash {
+                  background: url('./images/icons_wash.svg') center no-repeat;
+                  background-size: 3.2rem 3.2rem;
+                  &::after {
+                    content: '管道冲洗';
+                  }
+                  background-color: inherit;
+                  & + .bottleRestVol {
+                    height: 0 !important;
+                  }
+                }
+
+                &.leaving {
+                  background: url('./images/icons_leave.svg') center no-repeat;
+                  background-size: 3.2rem 3.2rem;
+                  &::after {
+                    content: '暂时离开';
+                  }
+                  background-color: inherit;
+                  & + .bottleRestVol {
+                    height: 0 !important;
+                  }
+                }
+              }
+
+              .bottleRestVol {
+                z-index: 11;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: #b4ddfa;
+                height: 33px;
+
+                &.nonVol {
+                  height: 0px;
+                }
+
+                &.speedAlarmVol {
+                  background: #ffcc4d;
+                }
+
+                &.smallRestCapacityVol {
+                  background: #e000e0;
+                  height: 0.6rem !important;
+                }
+              }
+
+              .bottleText {
+                position: absolute;
+                width: 100%;
+                z-index: 22;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .monitorRestCapacity {
+                  width: 100%;
+                  flex: 1;
+                  position: relative;
+                  display: flex;
+                  align-items: flex-end;
+                  justify-content: center;
+                  padding-bottom: 1rem;
+
+                  &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 4rem;
+                    height: 0.133rem;
+                    background: #808080;
+                  }
+
+                  .restCapacityNum {
+                    font-size: 1.5rem;
+                    color: #333;
+                    line-height: 1;
+                  }
+                }
+
+                .monitorRestTime {
+                  flex: 1;
+                  display: flex;
+                  width: 100%;
+                  i {
+                    width: 50%;
+                    background-size: 4rem 4rem !important;
+                  }
+                  .timeIcon {
+                    background: url('./images/icons_time_little.svg') center no-repeat;
+                  }
+                  .dropIcon {
+                    background: url('./images/icons_drop_little.svg') center no-repeat;
+                  }
+                  .dropRedIcon {
+                    background: url('./images/icons_drop_red.svg') center no-repeat;
+                  }
+
+                  .monitorRestNum {
+                    display: flex;
+                    flex: 1;
+                    align-items: center;
+                    font-size: 1.4rem;
+                    color: #333;
+                    &.textRed {
+                      color: #f21259;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .justShowBedCode {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+
+          .bedCode {
+            font-size: 4.533rem;
+            color: #f21259;
+            line-height: 1.5;
+          }
+          .hintMessage {
+            font-size: 1.2rem;
+            color: #f21259;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ruleWrap {
+    // height: 38rem;
+    padding: 0.25rem;
+    .innerItem {
+      padding: 0 1.2rem;
+    }
+  }
+  .bottleOutlineWrap {
+    width: 5.867rem;
+    height: 8rem;
+    margin-bottom: 0.5rem;
+  }
+  .tipsWrap {
+    // margin-top: 0.667rem;
+    // height: calc(~'100% - 38rem - 1.55rem');
+  }
+  .bedCode {
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+  }
+  .infusionStatusWrap {
+    &::after {
+      font-size: 1rem;
+      bottom: 0.18rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+}
+
+@media screen and (min-width: 1920px) {
+  .bottleOutlineWrap {
+    margin-bottom: 0.8rem;
+    width: 5.867rem;
+    height: 8rem;
+  }
+  .ruleWrap {
+    // height: 48rem;
+    padding: 0.375rem;
+    .innerItem {
+      padding: 0 0.8rem;
+    }
+  }
+  .tipsWrap {
+    // margin-top: 1rem;
+    // height: calc(~'100% - 48rem - 1.82rem');
+  }
+  .bedCode {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+  .infusionStatusWrap {
+    &::after {
+      bottom: 0.3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 2048px) {
+
+}

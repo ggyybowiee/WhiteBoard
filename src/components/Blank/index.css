@@ -1,0 +1,34 @@
+.content {
+  text-align: center;
+}
+
+.boxWrapper {
+  width: 100%;
+  height: 260px;
+  margin-top: 10vh;
+}
+
+.text {
+  font-size: 1.2rem;
+  color: #CCCFD4;
+}
+
+.noDrugs {
+  background: url('./images/image_blank_addDrugs.png') no-repeat center;
+}
+
+.noAccount {
+  background: url('./images/image_blank_noAccount.png') no-repeat center;
+}
+
+.noSetting {
+  background: url('./images/image_blank_noSetting.png') no-repeat center;
+}
+
+.waitingAdd {
+  background: url('./images/image_blank_waitingAdd.png') no-repeat center;
+}
+
+.waitingList {
+  background: url('./images/image_blank_waitingList.png') no-repeat center;
+}

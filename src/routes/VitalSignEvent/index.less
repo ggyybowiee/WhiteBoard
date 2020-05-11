@@ -1,0 +1,282 @@
+.vitalSignEventWrap {
+  height: 100%;
+
+  :global {
+    .ant-carousel .slick-dots {
+      bottom: 0.75rem;
+    }
+    .ant-carousel .slick-dots li button {
+      background-color: @column-font-color !important;
+    }
+    .ant-carousel .slick-dots li.slick-active button {
+      background-color: @column-font-color !important;
+    }
+    .ant-carousel {
+      height: 100%;
+      .slick-slider {
+        height: 100%;
+        .slick-track{
+          height: 100%;
+        }
+      }
+      .slick-slider div{
+        height: 100%;
+      }
+    }
+
+    .ant-spin-spinning {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(~"50% - 29px");
+    }
+
+    .ant-spin {
+      color: @whiteboard-primary-bgcolor;
+    }
+
+    .ant-spin-dot i {
+      background-color:  @whiteboard-primary-bgcolor;
+    }
+  }
+
+  .commonHeightDiv div {
+    height: min-content !important;
+  }
+
+  .vitalAbnormal {
+    height: calc(~"60% - 0.875rem");
+    width: 100%;
+    margin-bottom: 0.875rem;
+    display: flex;
+  }
+
+  .earlyWarningRisk {
+    height: 40%;
+    display: flex;
+    width: 100%;
+  }
+
+  .trapezoidalPage {
+    color: @vital-trapezoidal-page-color;
+    width: 4.625rem;
+    height: 100%;
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+    position: relative;
+
+    .vitalAbnormalText {
+      position: absolute;
+      width: 1.625rem;
+      height: 8.8rem;
+      top: calc(~"50% - 4.4rem");
+    }
+
+    .earlyWarningRiskText {
+      position: absolute;
+      width: 1.625rem;
+      height: 13.2rem;
+      top: calc(~"50% - 6.6rem");
+    }
+  }
+
+  .trapezoidalPage:before {
+    content:"";
+    display:block;
+    position: absolute;
+    left: 0;
+    border-right: 4.625rem solid #d8e7ff;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    width: 100%;
+    height: 100%;
+  }
+
+  .vitalAbnormalContent {
+    background-color: @content-bgcolor;
+    box-shadow: 0px 0px 1rem 0px rgba(64, 64, 64, 0.22);
+    width: calc(~"100% - 4.625rem");
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    display: flex;
+
+    .vitalEvent {
+      border-right: 2px solid @vital-abnormal-border-right-color;
+      width: 100%;
+
+      .header {
+        height: 5rem;
+        line-height: 5rem;
+        padding: 0 2rem;
+        overflow: hidden;
+        font-size: 1.375rem;
+        background-color: @content-bgcolor;
+
+        .leftText {
+          float: left;
+          img {
+            width: 2.4rem;
+            height: 2.4rem;
+            margin-right: 0.4rem;
+            margin-top: -0.4rem;
+          }
+        }
+
+        .rightText {
+          float: right;
+          font-size: 1.25rem;
+
+          span {
+            display: inline-block;
+            margin-left: 0.5rem;
+            color: @vital-abnormal-unit-color;
+          }
+        }
+      }
+
+      .content {
+        height: calc(~"100% - 5rem");
+        margin: 0;
+
+        .pageStyle {
+          height: 100%;
+          width: 100%;
+
+          .lineStyle {
+            padding: 0 3rem;
+            height: 4.625rem;
+            line-height: 4.625rem;
+            color: @header-font-color;
+            font-size: 1.375rem;
+            overflow: hidden;
+            clear: both;
+            
+            .leftShow {
+              float: left;
+              height: 100%;
+
+              span {
+                display: inline-block;
+                margin-right: 1rem;
+                text-align: right;
+              }
+            }
+
+            .rightShow {
+              float: right;
+              height: 100%;
+
+              span {
+                display: inline-block;
+                margin-left: 1rem;
+                text-align: right;
+              }
+            }
+          }
+
+          .lineStyle:nth-child(odd) {
+            background-color: @vital-abnormal-line-odd-color;
+          }
+
+          .lineStyle:nth-child(even) {
+            background-color: @vital-abnormal-line-even-color;
+          }
+        }
+      }
+    }
+
+    .vitalEvent:last-child {
+      border: none;
+    }
+  }
+
+  .earlyWarningRiskContent {
+    background-color: @content-bgcolor;
+    box-shadow: 0px 0px 1rem 0px rgba(64, 64, 64, 0.22);
+    width: calc(~"100% - 4.625rem");
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 1.25rem 1.875rem 1.25rem 1.875rem;
+    display: flex;
+
+    .dangerTypeItem {
+      width: calc(~"54% - 0.875rem");
+      height: 100%;
+      margin-right: 0.875rem;
+      display: flex;
+
+      .riskItem {
+        width: 100%;
+        border-right: 1.375rem solid @content-bgcolor;
+
+        .riskItemHeader {
+          height: 3.125rem;
+          line-height: 3.125rem;
+          color: @header-font-color;
+          font-size: 1.25rem;
+
+          .dangerTypeRound {
+            display: inline-block;
+            width: 0.625rem;
+            height: 0.625rem;
+            margin-right: 0.5rem;
+            border-radius: 50%;
+          }
+        }
+
+        .riskItemHeaderContent {
+          height: calc(~"100% - 3.125rem");
+          background-color: @vital-abnormal-line-odd-color;
+          padding: 0 1rem;
+
+          .pageStyle {
+            height: 100%;
+            width: 100%;
+
+            span {
+              display: inline-block;
+              width: 3.75rem;
+              height: 2.8125rem;
+              line-height: 2.8125rem;
+              margin-left: 0.5rem;
+              font-size: 1.75rem;
+              color: @footer-font-color;
+              text-align: center;
+              margin-top: 1rem;
+              border-radius: 1.4375rem;
+            }
+          }
+        }
+      }
+    }
+
+    .chartItem {
+      width: 46%;
+      height: 100%;
+      display: flex;
+
+      .mewsItem {
+        width: 100%;
+        border-right: 1.375rem solid @content-bgcolor;
+
+        .mewsItemHeader {
+          height: 3.125rem;
+          line-height: 3.125rem;
+          color: @header-font-color;
+          text-align: center;
+          font-size: 1.25rem;
+        }
+
+        .mewsItemHeaderContent {
+          height: calc(~"100% - 3.125rem");
+          // background-color: #ccc;
+          padding: 0 1rem;
+        }
+      }
+
+      .mewsItem:last-child {
+        border: none;
+      }
+    }
+  }
+}

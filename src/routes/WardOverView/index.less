@@ -1,0 +1,778 @@
+.wardOverViewWrap {
+  height: 100%;
+  display: flex;
+
+  :global {
+    .ant-carousel .slick-dots {
+      bottom: -0.5rem;
+    }
+    .ant-carousel .slick-dots li button {
+      background-color: @column-font-color !important;
+    }
+    .ant-carousel .slick-dots li.slick-active button {
+      background-color: @column-font-color !important;
+    }
+    .ant-carousel {
+      height: 100%;
+      .slick-slider {
+        height: 100%;
+        .slick-track{
+          height: 100%;
+        }
+      }
+      .slick-slider div{
+        height: 100%;
+      }
+    }
+
+    .ant-spin-spinning {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(~"50% - 29px");
+    }
+
+    .ant-spin {
+      color: @whiteboard-primary-bgcolor;
+    }
+
+    .ant-spin-dot i {
+      background-color:  @whiteboard-primary-bgcolor;
+    }
+
+
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: rgba(191, 191, 191, 0.24);
+  }
+
+  .loadingStyle {
+    object-fit: contain;
+    position: fixed !important;
+    top: 3.15rem !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    box-sizing: border-box !important;
+    min-width: 0px !important;
+    max-width: none !important;
+    min-height: 0px !important;
+    max-height: none !important;
+    width: 100% !important;
+    height: calc(~"100% - 3.15rem - 6.75rem") !important;
+    transform: none !important;
+    margin: 0px !important;
+    z-index: 999;
+    background: @wrap-bgcolor;
+  }
+
+  .leftContent {
+    width: calc(~"100% - 31vw - 31vw - 1.75rem");
+    margin-right: 0.875rem;
+    height: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 1rem 0px rgba(64, 64, 64, 0.22);
+    background-color: @content-bgcolor;
+
+    .header {
+      height: 3.75rem;
+      line-height: 3.75rem;
+      overflow: hidden;
+      font-size: 1.6rem;
+      background: @title-primary-bgcolor;
+      padding: 0 2rem;
+      clear: both;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+
+      .leftText {
+        float: left;
+        background: url('./icons/icon_ward_door.svg') no-repeat left center;
+        background-size: 2.4rem 2.4rem;
+        padding: 0rem 0rem 0rem 2.8rem;
+      }
+
+      .rightText {
+        float: right;
+        font-size: 1.25rem;
+        height: 3.75rem;
+
+        span:first-child {
+          display: inline-block;
+          vertical-align: top;
+        }
+
+        span:last-child {
+          display: inline-block;
+          margin-left: 0.5rem;
+          font-size: 2rem;
+          color: @total-num-color;
+        }
+      }
+    }
+
+    .content {
+      height: calc(~"100% - 3.75rem");
+      padding: 0.25rem 0rem 1.25rem 2rem;
+      margin: 0;
+      position: relative;
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      overflow: hidden;
+
+      .contentWrap {
+        width: 100%;
+        height: 100%;
+        display: flex !important;
+        padding-right: 2rem;
+      }
+
+      .leftLabel {
+        width: 10.1875rem;
+        height: 2.8125rem;
+        background: @left-label-bgcolor;
+        margin-top: 1rem;
+        border-radius: 4px;
+        border: solid 1px @sub-title-border-color;
+        box-sizing: content-box;
+        span {
+          display: inline-block;
+          color: @header-font-color;
+          font-size: 1.375rem;
+          height: calc(~'2.8125rem - 2px');
+          line-height: calc(~'2.8125rem - 2px');
+          padding: 0 0.75rem;
+          text-align: center;
+        }
+        span:first-child {
+          width: 7.2625rem;
+          border-right: 1px solid @sub-title-border-bottom-color;
+          text-align-last: justify;
+          letter-spacing: 0px;
+        }
+        span:last-child {
+          width: 2.7rem;
+          padding: 0 0.5rem;
+        }
+      }
+
+      .rightLabel {
+        width: calc(~"100% - 10.1875rem - 0.5rem");
+        margin-left: 0.5rem;
+        span {
+          display: inline-block;
+          width: 3.75rem;
+          height: 2.8125rem;
+          line-height: 2.8125rem;
+          margin-left: 0.5rem;
+          font-size: 1.75rem;
+          color: @footer-font-color;
+          text-align: center;
+          margin-top: 1rem;
+          border-radius: 1.4375rem;
+        }
+      }
+    }
+  }
+  .centerContent {
+    width: 31vw;
+    height: 100%;
+    margin-right: 0.875rem;
+
+    .topPart {
+      height: calc(~"60% - 0.875rem");
+      margin-bottom: 0.875rem;
+      box-shadow: 0px 0px 1rem 0px rgba(64, 64, 64, 0.22);
+      border-radius: 0.5rem;
+      background-color: @content-bgcolor;
+      .header {
+        height: 3.75rem;
+        line-height: 3.75rem;
+        font-size: 1.6rem;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        background: @title-primary-bgcolor url('./icons/icon_nursing_content.svg') no-repeat 2rem center;
+        background-size: 2.4rem 2.4rem;
+        padding: 0rem 0rem 0rem 4.8rem;
+      }
+
+      .content {
+        height: calc(~"100% - 3.75rem");
+        padding: 0.25rem 0rem 1.25rem 2rem;
+        margin: 0;
+        position: relative;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        overflow:hidden;
+
+        .contentWrap {
+          width: 100%;
+          height: 100%;
+          display: flex !important;
+          padding-right: 2rem;
+        }
+
+        .leftLabel {
+          width: 10.1875rem;
+          height: 2.8125rem;
+          background: @left-label-bgcolor;
+          margin-top: 1rem;
+          border-radius: 4px;
+          border: solid 1px @sub-title-border-color;
+          box-sizing: content-box;
+          span {
+            display: inline-block;
+            color: @header-font-color;
+            font-size: 1.375rem;
+            height: calc(~'2.8125rem - 2px');
+            line-height: calc(~'2.8125rem - 2px');
+            padding: 0 0.75rem;
+            text-align: center;
+          }
+          span:first-child {
+            width: 7.2625rem;
+            border-right: 1px solid @sub-title-border-bottom-color;
+            text-align-last: justify;
+            letter-spacing: 0px;
+          }
+          span:last-child {
+            width: 2.7rem;
+            padding: 0 0.5rem;
+          }
+        }
+
+        .rightLabel {
+          width: calc(~"100% - 10.1875rem - 0.5rem");
+          margin-left: 0.5rem;
+          span {
+            display: inline-block;
+            width: 3.75rem;
+            height: 2.8125rem;
+            line-height: 2.8125rem;
+            margin-left: 0.5rem;
+            font-size: 1.75rem;
+            color: @footer-font-color;
+            text-align: center;
+            margin-top: 1rem;
+            border-radius: 1.4375rem;
+          }
+        }
+      }
+    }
+
+    .bottomPart {
+      height: 40%;
+      border-radius: 0.5rem;
+      box-shadow: 0px 0px 1rem 0px rgba(64, 64, 64, 0.22);
+      background-color: @content-bgcolor;
+      .header {
+        height: 3.75rem;
+        line-height: 3.75rem;
+        font-size: 1.6rem;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        background: @title-primary-bgcolor url('./icons/icon_special_check.svg') no-repeat 2rem center;
+        background-size: 2.4rem 2.4rem;
+        padding: 0rem 0rem 0rem 4.8rem;
+      }
+
+      .content {
+        height: calc(~"100% - 3.75rem");
+        padding: 0.25rem 0rem 1.25rem 2rem;
+        margin: 0;
+        position: relative;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        overflow:hidden;
+
+        .contentWrap {
+          width: 100%;
+          height: 100%;
+          padding-right: 2rem;
+          display: flex !important;
+        }
+
+        .leftLabel {
+          width: 10.1875rem;
+          height: 2.8125rem;
+          background: @left-label-bgcolor;
+          margin-top: 1rem;
+          border-radius: 4px;
+          border: solid 1px @sub-title-border-color;
+          box-sizing: content-box;
+          span {
+            display: inline-block;
+            color: @header-font-color;
+            font-size: 1.375rem;
+            height: calc(~'2.8125rem - 2px');
+            line-height: calc(~'2.8125rem - 2px');
+            padding: 0 0.75rem;
+            text-align: center;
+          }
+          span:first-child {
+            width: 7.2625rem;
+            border-right: 1px solid @sub-title-border-bottom-color;
+            text-align-last: justify;
+            letter-spacing: 0px;
+          }
+          span:last-child {
+            width: 2.7rem;
+            padding: 0 0.5rem;
+          }
+        }
+
+        .rightLabel {
+          width: calc(~"100% - 10.1875rem - 0.5rem");
+          margin-left: 0.5rem;
+          span {
+            display: inline-block;
+            width: 3.75rem;
+            height: 2.8125rem;
+            line-height: 2.8125rem;
+            margin-left: 0.5rem;
+            font-size: 1.75rem;
+            color: @footer-font-color;
+            text-align: center;
+            margin-top: 1rem;
+            border-radius: 1.4375rem;
+          }
+        }
+      }
+    }
+  }
+  .rightContent {
+    width: 31vw;
+    height: 100%;
+
+    .earlyWarning {
+      height: calc(~"60% - 0.875rem");
+      margin-bottom: 0.875rem;
+      box-shadow: 0px 0px 1rem 0px rgba(64, 64, 64, 0.22);
+      background-color: @content-bgcolor;
+      border-radius: 0.5rem;
+
+      .commonHeader {
+        .lineLeft {
+          background: @early-warning-line-left-bg-color;
+        }
+
+        .lineRight {
+          background: @early-warning-line-right-bg-color;
+        }
+
+        .title {
+          color: @early-warning-color;
+        }
+
+        .leftDot {
+          background-color: @early-warning-color;
+        }
+
+        .rightDot {
+          background-color: @early-warning-color;
+        }
+      }
+
+      .content {
+        height: calc(~"100% - 3.75rem");
+        padding: 0.25rem 0rem 1.25rem 2rem;
+        margin: 0;
+        position: relative;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        overflow:hidden;
+
+        .contentWrap {
+          width: 100%;
+          height: 100%;
+          display: flex !important;
+          padding-right: 2rem;
+        }
+
+        .itemTitle {
+          height: 2.8125rem !important;
+          line-height: 2.8125rem;
+          font-size: 1.375rem;
+          margin-top: 0.5rem;
+          color: @early-warning-item-title-color;
+          padding-right: 2rem;
+        }
+
+        .infusionFinishing {
+          background: url('./icons/infusion-finishing.svg') no-repeat left center;
+          background-size: 2.4rem 2.4rem;
+          padding-left: 2.8rem;
+        }
+
+        .infusionSpeedException {
+          background: url('./icons/infusion-speed-exception.svg') no-repeat left center;
+          background-size: 2.4rem 2.4rem;
+          padding-left: 2.8rem;
+        }
+
+        .infusionPause {
+          background: url('./icons/infusion-pause.svg') no-repeat left center;
+          background-size: 2.4rem 2.4rem;
+          padding-left: 2.8rem;
+        }
+
+        .needTurn {
+          background: url('./icons/need-turn.svg') no-repeat left center;
+          background-size: 2.4rem 2.4rem;
+          padding-left: 2.8rem;
+        }
+
+        .showItem {
+          padding-left: 2.4rem;
+          padding-right: 2rem;
+          span {
+            display: inline-block;
+            width: 3.75rem;
+            height: 2.8125rem;
+            line-height: 2.8125rem;
+            margin-left: 0.5rem;
+            border-radius: 3px;
+            font-size: 1.75rem;
+            color: @footer-font-color;
+            text-align: center;
+            margin-top: 0.5rem;
+            border-radius: 1.4375rem;
+          }
+        }
+
+        .leftLabel {
+          width: 10.1875rem;
+          height: 2.8125rem;
+          background: @left-label-bgcolor;
+          margin-top: 1rem;
+          border-radius: 4px;
+          border: solid 1px @sub-title-border-color;
+          box-sizing: content-box;
+          span {
+            display: inline-block;
+            color: @header-font-color;
+            font-size: 1.375rem;
+            height: calc(~'2.8125rem - 2px');
+            line-height: calc(~'2.8125rem - 2px');
+            padding: 0 0.75rem;
+            text-align: center;
+          }
+          span:first-child {
+            width: 7.2625rem;
+            border-right: 1px solid @sub-title-border-bottom-color;
+            text-align-last: justify;
+            letter-spacing: 0px;
+          }
+          span:last-child {
+            width: 2.7rem;
+            padding: 0 0.5rem;
+          }
+        }
+
+        .rightLabel {
+          width: calc(~"100% - 10.1875rem - 0.5rem");
+          margin-left: 0.5rem;
+          span {
+            display: inline-block;
+            width: 3.75rem;
+            height: 2.8125rem;
+            line-height: 2.8125rem;
+            margin-left: 0.5rem;
+            font-size: 1.75rem;
+            color: @footer-font-color;
+            text-align: center;
+            margin-top: 1rem;
+            border-radius: 1.4375rem;
+          }
+        }
+      }
+    }
+
+    .noEarlyWarning {
+      height: 3.75rem;
+
+      .header {
+        .lineLeft {
+          background: @line-left-bg-color;
+        }
+
+        .lineRight {
+          background: @line-right-bg-color;
+        }
+
+        .title {
+          color: @no-early-warning-color;
+        }
+
+        .leftDot {
+          background-color: @dot-color;
+        }
+
+        .rightDot {
+          background-color: @dot-color;
+        }
+      }
+    }
+
+    .topPart {
+      height: calc(~"60% - 0.875rem - 3.75rem - 0.875rem");
+      margin-bottom: 0.875rem;
+      box-shadow: 0px 0px 1rem 0px rgba(64, 64, 64, 0.22);
+      background-color: @content-bgcolor;
+      border-radius: 0.5rem;
+
+      .content {
+        height: calc(~"100% - 6.1875rem");
+        background: @textarea-border-bgcolor;
+        margin: 0 1.5rem 1.75rem 1.5rem;
+        overflow:hidden;
+
+        .divStyle {
+          margin: 0.75rem;
+          border: 1px solid @textarea-border-color;
+          height: calc(~"100% - 1.5rem");
+          overflow: auto;
+
+          .text {
+            font-size: 1.6rem;
+            line-height: 1.5rem;
+            color: @header-font-color;
+            padding: 1rem 1rem 0;
+          }
+        }
+
+        .divStyle>div {
+          height: min-content !important;
+        }
+
+        .textareaStyle {
+          margin: 0.75rem;
+          border: 1px solid @textarea-border-color;
+          height: calc(~"100% - 1.5rem");
+
+          textarea {
+            width: 100%;
+            height: 100%;
+            border: 1px solid @textarea-border-color;
+          }
+        }
+      }
+    }
+
+    .bottomPart {
+      height: 40%;
+      box-shadow: 0px 0px 1rem 0px rgba(64, 64, 64, 0.22);
+      background-color: @content-bgcolor;
+      border-radius: 0.5rem;
+      padding: 0.25rem 0rem 1.25rem 0rem;
+
+      .content {
+        height: calc(~"100% - 3.75rem - 0.7rem");
+        margin: 0 1.5rem 0rem 1.5rem;
+        overflow:hidden;
+        // display: flex;
+
+        .tabWrap {
+          width: 100%;
+          display: flex;
+        }
+
+        :global {
+          .ant-spin-nested-loading {
+            // height: 100%;
+            background: @textarea-border-bgcolor;
+            .ant-spin-container {
+              // height: 100%;
+              .ant-table {
+                // height: 100%;
+                border-color: @content-bgcolor !important;
+                .ant-table-content {
+                  // height: 100%;
+                  border-color: @content-bgcolor !important;
+                  .ant-table-body {
+                    // height: 100%;
+                    table {
+                      // height: 100%;
+                      .ant-table-thead>tr>th {
+                        background: @column-bgcolor;
+                        color: @column-font-color;
+                        border-color: @content-bgcolor;
+                        font-size: 1rem;
+                      }
+                      .ant-table-tbody>tr>td{
+                        border-color: @content-bgcolor;
+                        font-size: 1rem;
+                        color: @header-font-color;
+                      }
+
+                      .ant-table-tbody>tr.ant-table-row-hover>td, .ant-table-tbody>tr:hover>td, .ant-table-thead>tr.ant-table-row-hover>td, .ant-table-thead>tr:hover>td{
+                        background: transparent !important;
+                      }
+                    }
+                  }
+                  .ant-table-bordered.ant-table-empty .ant-table-placeholder {
+                    border: none !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        table {
+          padding: 0;
+          height: 100%;
+          color: @footer-font-color;
+        }
+
+        .leftTableStyle {
+          float: left;
+          width: 60%;
+          margin-right: 0.5rem;
+          text-align: center;
+          overflow: auto;
+        }
+
+        .rightTableStyle {
+          float: right;
+          width: calc(~"40% - 0.5rem");
+          text-align: center;
+          overflow: auto;
+        }
+      }
+    }
+  }
+
+  .commonHeightDiv div {
+    // width: 100%;
+    height: min-content !important;
+  }
+}
+
+.commonHeader {
+  height: 3.75rem !important;
+  line-height: 3.75rem;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 0 1.2rem;
+  background-color: transparent;
+  position: relative;
+
+  .lineLeft {
+    display: inline-block;
+    width: 6.5625rem;
+    height: 0.25rem;
+    background: @line-left-bg-color;
+    vertical-align: middle;
+  }
+
+  .lineRight {
+    display: inline-block;
+    width: 6.5625rem;
+    height: 0.25rem;
+    background: @line-right-bg-color;
+    vertical-align: middle;
+  }
+
+  .title {
+    display: inline-block;
+    vertical-align: top;
+    color: @header-font-color;
+  }
+
+  .leftDot {
+    display: inline-block;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 50%;
+    margin: 0 1rem 0 0.4rem;
+    background-color: @dot-color;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .rightDot {
+    display: inline-block;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 50%;
+    margin: 0 0.4rem 0 1rem;
+    background-color: @dot-color;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .canEditBtn {
+    position: absolute;
+    right: 1.2rem;
+    top: 0.3rem;
+  }
+}
+
+.patInfo {
+  font-size: 3.75rem;
+  color: @header-font-color;
+  text-align: center;
+  margin-top: 3rem;
+
+  span {
+    display: inline-block;
+  }
+
+  span:last-child {
+    margin-left: 2rem;
+  }
+}
+
+.patAction {
+  font-size: 3.75rem;
+  color: @header-font-color;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.cancelButton {
+  display: inline-block;
+  font-size: 2.25rem;
+  color: @total-num-color;
+  height: 5rem;
+  line-height: 5rem;
+  width: 10rem;
+}
+
+.cancelButton:focus {
+  color: @total-num-color;
+  border: 1px solid @whiteboard-primary-bgcolor;
+}
+
+.cancelButton:hover {
+  color: @total-num-color;
+}
+
+.okButton {
+  display: inline-block;
+  font-size: 2.25rem;
+  color: #fff;
+  background: linear-gradient(-90deg, 
+		#3674e0 0%, 
+		#3c9bf4 100%);
+  border-radius: 2.5rem;
+  width: 18.5rem;
+  height: 5rem;
+  line-height: 5rem;
+}
+
+.okButton:focus {
+  border: 1px solid @whiteboard-primary-bgcolor;
+}
+
+.okButton:hover {
+  color: #fff;
+}
